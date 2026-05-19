@@ -2,7 +2,7 @@
    7. ESTILOS DAS FORMAS DO MER
 ========================================= */
 .forma-entidade { width: 76px; height: 38px; background: var(--cor-entidade); border: 2.5px solid var(--cor-entidade-borda); border-radius: 3px; }
-.forma-relacionamento { width: 90px; height: 64px; background: var(--cor-relacionamento); border: 2.5px solid var(--cor-relacionamento-borda); clip-path: polygon(50% 0%,100% 50%,50% 100%,0% 50%); }
+.forma-relacionamento { width: 110px; height: 64px; background: var(--cor-relacionamento); border: 2.7px solid var(--cor-relacionamento-borda); clip-path: polygon(50% 0%,100% 50%,50% 100%,0% 50%); }
 .forma-atributo { width: 76px; height: 38px; background: var(--cor-atributo); border: 2.5px solid var(--cor-atributo-borda); border-radius: 50%; }
 /* Elementos quando soltos no canvas */
 .elemento-canvas {
@@ -22,5 +22,5 @@
 .elemento-canvas.selecionado { outline: 3px dashed #ff9800; outline-offset: 3px; z-index: var(--z-ui-base); }
 
 .elemento-canvas.forma-entidade { width: 90px; height: 44px; background: var(--cor-entidade); border: 2.5px solid var(--cor-entidade-borda); border-radius: 3px; box-shadow: 0 3px 8px rgba(30,136,229,0.2); }
-.elemento-canvas.forma-relacionamento { width: 110px; height: 80px; background: var(--cor-relacionamento); border: none; clip-path: polygon(50% 0%,100% 50%,50% 100%,0% 50%); box-shadow: none; }
+.elemento-canvas.forma-relacionamento { width: 130px; height: 85px; background: var(--cor-relacionamento); border: none; clip-path: polygon(50% 0%,100% 50%,50% 100%,0% 50%); }
 .elemento-canvas.forma-atributo { width: 90px; height: 44px; background: var(--cor-atributo); border: 2.5px solid var(--cor-atributo-borda); border-radius: 50%; box-shadow: 0 3px 8px rgba(67,160,71,0.2); }

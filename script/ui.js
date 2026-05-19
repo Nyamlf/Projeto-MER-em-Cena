@@ -72,10 +72,21 @@ export function mostrarErro(msg) {
 export function mostrarDicaMascote(msg, tipo = 'atencao') {
     const balaoMascote = document.querySelector('.balao-fala');
     const textoMascote = document.querySelector('.balao-fala p');
+    const imagemMascote = document.querySelector('.imagem-mascote');
     
     if (balaoMascote && textoMascote) {
         if (!balaoMascote.hasAttribute('data-fala-original')) {
             balaoMascote.setAttribute('data-fala-original', textoMascote.innerText);
+        }
+
+        if (imagemMascote) {
+            if (tipo === 'atencao') {
+                imagemMascote.src = 'arara_erro.png'; // imagem de susto/alerta
+            } else if (tipo === 'sucesso') {
+                imagemMascote.src = 'arara_feliz.png';      // imagem de comemoração
+            } else if (tipo === 'vitoria') {
+                imagemMascote.src = 'arara_venceu.png';    // imagem de vitória
+            }
         }
 
         // Estilos e Formatações
@@ -101,7 +112,10 @@ export function mostrarDicaMascote(msg, tipo = 'atencao') {
                 balaoMascote.style.borderColor = '#e2e8f0';
                 balaoMascote.style.backgroundColor = 'white';
                 textoMascote.innerText = balaoMascote.getAttribute('data-fala-original');
+
+                if (imagemMascote) imagemMascote.src = 'arara_estudante.png'; // 👈 restaura
             }, 6000);
+
         }
     }
 }

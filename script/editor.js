@@ -75,7 +75,7 @@ export function setModo(modo) {
     // 3. Atualiza o painel de texto
     const labels = { 
         conectar: 'MODO: CONECTAR  |  arraste para mover', 
-        remover: 'MODO: REMOVER ELEMENTO' 
+        remover: 'MODO: REMOVER ELEMENTO | clique para remover' 
     };
     
     if (modoLabel) {
@@ -108,7 +108,7 @@ export function validarModelo() {
         const proximaFase = cenarioAtualId + 1;
         
         const mensagemSucesso = `
-            <strong>Fantástico!</strong> Você modelou tudo certinho! 🐧✨<br>
+            <strong>Fantástico!</strong> Você modelou tudo certinho! ✨<br>
             <button onclick="avancarFase(${proximaFase})" style="margin-top:10px; padding:6px 12px; background:#10b981; color:white; border:none; border-radius:6px; cursor:pointer; font-weight:bold;">
                 Próximo Desafio ➔
             </button>
@@ -130,6 +130,12 @@ export function avancarFase(idProximaFase) {
     // Assim, todas as divs e linhas do SVG continuam intactas na tela!
     
     // 2. Carrega o vídeo e o texto da nova fase
+    if (idProximaFase > 6) {
+        mostrarTelaFim();
+        return;
+    }
+
+    cenarioAtualId = idProximaFase;
     carregarCenario(idProximaFase);
 
     // 3. Tira a roupa de "Vitória" do Pinguim e volta ele ao normal
@@ -628,4 +634,29 @@ export function menuTornarPK() {
     elementoContextual.classList.add('is-pk');
     
     fecharMenuElemento();
+}
+
+function mostrarTelaFim() {
+    const telaFim = document.createElement('div');
+    telaFim.style.cssText = `
+        position: fixed; top: 0; left: 0;
+        width: 100vw; height: 100vh;
+        background: #1a1a2e;
+        display: flex; flex-direction: column;
+        justify-content: center; align-items: center;
+        z-index: 9999999; color: white; text-align: center;
+    `;
+    telaFim.innerHTML = `
+        <img src="arara_venceu.png" style="width:180px; margin-bottom:30px;">
+        <h1 style="font-size:3rem; letter-spacing:4px; margin-bottom:16px;">🎬 FIM DE GRAVAÇÃO!</h1>
+        <p style="font-size:1.2rem; color:#a8b2d1; margin-bottom:40px;">
+            Você dominou o MER! O diretor está orgulhoso.
+        </p>
+        <button onclick="location.reload()" style="
+            background:#e94560; color:white; border:none;
+            padding:14px 36px; font-size:1.2rem; font-weight:bold;
+            border-radius:30px; cursor:pointer;
+        ">↩ Jogar Novamente</button>
+    `;
+    document.body.appendChild(telaFim);
 }

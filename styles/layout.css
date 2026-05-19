@@ -265,8 +265,8 @@
     align-items: center;
 }
 .imagem-mascote {
-    width: 80%;
-    max-width: 180px;
+    width: 50%;
+    max-width: 100px;
     height: auto;
 }
 .balao-fala {
