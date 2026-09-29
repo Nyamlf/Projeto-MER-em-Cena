@@ -23,3 +23,4 @@ O MVP foi construído visando leveza e alta acessibilidade em laboratórios educ
 
 ## Diretrizes de Anonimização (Double-Blind Review)
 Em rigorosa conformidade com as diretrizes de avaliação cega por pares (double-blind review) adotadas por simpósios científicos, todas as informações sensíveis, nomes de autores, orientadores ou instituições de ensino foram inteiramente removidas do código-fonte e deste documento.
+:)
