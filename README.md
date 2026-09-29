@@ -4,7 +4,7 @@ Este repositório contém o código-fonte (MVP) da plataforma **MER em Cena**, u
 
 ## Acessar a Plataforma (Teste)
 O protótipo funcional da plataforma encontra-se hospedado e disponível para uso, testes e avaliação de interface.
-**[https://6a175ab5debfe12c1e9cef15--elegant-sable-a72374.netlify.app/](https://6a175ab5debfe12c1e9cef15--elegant-sable-a72374.netlify.app/)**
+**[https://6a175ab5debfe12c1e9cef15--elegant-sable-a72374.netlify.app/](https://meremcena.netlify.app/)**
 
 ## Sobre o Projeto
 O desenvolvimento desta ferramenta foi motivado pela identificação empírica de que a maior barreira para estudantes iniciantes não é a notação gráfica em si, mas a interpretação do mini-mundo — a etapa de extração de requisitos a partir de enunciados textuais. 
